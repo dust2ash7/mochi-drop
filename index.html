@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#100d18" />
+  <meta name="description" content="Drop sticky mochi. Match sizes. Make the giant daifuku — a premium watermelon-style merge game." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Mochi Drop" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <title>Mochi Drop</title>
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="./icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="hud" role="banner">
+      <div class="brand">
+        <p class="eyebrow">夜市 · night stall</p>
+        <h1>Mochi Drop</h1>
+      </div>
+      <div class="meters" aria-live="polite">
+        <div class="meter">
+          <span class="label">Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="meter">
+          <span class="label">Best</span>
+          <strong id="best">0</strong>
+        </div>
+      </div>
+      <div class="next-wrap">
+        <span class="label" id="next-label">Next</span>
+        <div class="next-orb" id="next-orb" aria-labelledby="next-label" role="img"></div>
+      </div>
+      <div class="hud-actions">
+        <button type="button" class="icon-btn" id="mute-btn" aria-label="Mute sound" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M4 10v4h3l5 4V6L7 10H4z" />
+            <path class="wave" d="M16 9.5a4 4 0 010 5" />
+            <path class="wave" d="M18.5 7a7 7 0 010 10" />
+          </svg>
+        </button>
+        <button type="button" class="icon-btn" id="pause-btn" aria-label="Pause game">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+            <rect x="6" y="5" width="4" height="14" rx="1" />
+            <rect x="14" y="5" width="4" height="14" rx="1" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="stage" role="main">
+      <canvas id="game" aria-label="Mochi Drop playfield. Move to aim, tap or press space to drop."></canvas>
+    </main>
+  </div>
+
+  <div id="overlay" class="overlay" data-screen="start">
+    <section class="card" id="screen-start" aria-labelledby="start-title">
+      <p class="card-kicker">A quiet stall, a warm bowl</p>
+      <h2 id="start-title">Mochi Drop</h2>
+      <p class="rules">Drop sticky rice. Match sizes. Make the giant daifuku — don’t overflow.</p>
+      <ul class="legend" aria-label="Mochi sizes from tiny rice to giant daifuku"></ul>
+      <p class="hint">Arrows or drag to aim · Space, Enter, or tap to drop</p>
+      <p class="best-line">Best <strong id="start-best">0</strong></p>
+      <button type="button" class="primary" id="play-btn">Begin</button>
+    </section>
+
+    <section class="card hidden" id="screen-pause" aria-labelledby="pause-title">
+      <p class="card-kicker">Steam held still</p>
+      <h2 id="pause-title">Paused</h2>
+      <p class="rules">The bowl waits. Same sizes still merge when you return.</p>
+      <div class="row">
+        <button type="button" class="primary" id="resume-btn">Resume</button>
+        <button type="button" class="ghost" id="restart-from-pause">Restart</button>
+      </div>
+    </section>
+
+    <section class="card hidden" id="screen-over" aria-labelledby="over-title">
+      <p class="card-kicker">The rim ran over</p>
+      <h2 id="over-title">Overflow</h2>
+      <p class="over-score">Score <strong id="over-score">0</strong></p>
+      <p class="best-line">Best <strong id="over-best">0</strong> · Finest <span id="over-finest">Kome</span></p>
+      <div class="row">
+        <button type="button" class="primary" id="retry-btn">One more try</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
