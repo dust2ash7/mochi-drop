@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Mochi Drop">
+  <rect width="512" height="512" rx="96" fill="#100d18"/>
+  <circle cx="256" cy="268" r="168" fill="#3a2e28"/>
+  <circle cx="256" cy="250" r="148" fill="#1c1824"/>
+  <circle cx="256" cy="248" r="118" fill="#ead4a0"/>
+  <circle cx="256" cy="248" r="118" fill="url(#g)"/>
+  <ellipse cx="214" cy="206" rx="48" ry="28" fill="rgba(255,255,255,0.38)" transform="rotate(-18 214 206)"/>
+  <defs>
+    <radialGradient id="g" cx="38%" cy="32%" r="70%">
+      <stop offset="0%" stop-color="#fff6e8"/>
+      <stop offset="45%" stop-color="#ead4a0"/>
+      <stop offset="100%" stop-color="#b89040"/>
+    </radialGradient>
+  </defs>
+</svg>
