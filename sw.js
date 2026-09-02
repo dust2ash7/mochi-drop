@@ -1,4 +1,4 @@
-const CACHE = "mochi-drop-v1";
+const CACHE = "mochi-drop-v2";
 const ASSETS = [
   "./",
   "./index.html",

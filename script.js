@@ -307,18 +307,17 @@
         walls(balls[i]);
         for (let j = i + 1; j < balls.length; j++) {
           if (!balls[j].alive) continue;
+          const a = balls[i], b = balls[j];
+          if (a.type === b.type && a.type < MAX_TYPE) {
+            const dx = b.x - a.x, dy = b.y - a.y;
+            const lim = a.r + b.r + 1.5;
+            if (dx * dx + dy * dy <= lim * lim) {
+              mergePair(a, b);
+              continue;
+            }
+          }
           collide(balls[i], balls[j]);
         }
-      }
-    }
-    const live = balls.filter((b) => b.alive);
-    for (let i = 0; i < live.length; i++) {
-      for (let j = i + 1; j < live.length; j++) {
-        const a = live[i], b = live[j];
-        if (a.type !== b.type || a.type >= MAX_TYPE) continue;
-        const dx = b.x - a.x, dy = b.y - a.y;
-        const lim = (a.r + b.r) * 0.92;
-        if (dx * dx + dy * dy < lim * lim) mergePair(a, b);
       }
     }
     balls = balls.filter((b) => b.alive);
@@ -610,8 +609,8 @@
     const dt = Math.min(0.033, (t - lastT) / 1000) || 0.016;
     lastT = t;
     if (mode === "playing") {
-      if (keys.ArrowLeft || keys.a || keys.A) aimX -= 280 * dt;
-      if (keys.ArrowRight || keys.d || keys.D) aimX += 280 * dt;
+      if (keys.ArrowLeft || keys.a || keys.A) aimX -= 520 * dt;
+      if (keys.ArrowRight || keys.d || keys.D) aimX += 520 * dt;
       const r = MOCHI[current].r;
       aimX = Math.max(BOWL.left + r, Math.min(BOWL.right - r, aimX));
       stepPhysics(dt);
@@ -649,6 +648,8 @@
     }
     if (mode === "playing") {
       if (e.key === "Escape") { e.preventDefault(); pause(); return; }
+      if (e.key === "ArrowLeft" || e.key === "a" || e.key === "A") { aimX -= 36; }
+      if (e.key === "ArrowRight" || e.key === "d" || e.key === "D") { aimX += 36; }
       if (e.key === " " || e.key === "Enter") { e.preventDefault(); dropNow(); }
     }
   }
