@@ -68,8 +68,12 @@
       <p class="rules">Drop sticky rice. Match sizes. Make the giant daifuku — don’t overflow.</p>
       <ul class="legend" aria-label="Mochi sizes from tiny rice to giant daifuku"></ul>
       <p class="hint">Arrows or drag to aim · Space, Enter, or tap to drop</p>
-      <p class="best-line">Best <strong id="start-best">0</strong></p>
-      <button type="button" class="primary" id="play-btn">Begin</button>
+      <p class="best-line">Best <strong id="start-best">0</strong> · Daily best <strong id="start-daily-best">0</strong> · Streak <strong id="start-streak">0</strong></p>
+      <p class="hint" id="daily-meta">Classic · or play today’s seeded Daily Bowl</p>
+      <div class="row">
+        <button type="button" class="primary" id="play-btn">Classic</button>
+        <button type="button" class="ghost" id="daily-btn">Daily Bowl</button>
+      </div>
     </section>
 
     <section class="card hidden" id="screen-pause" aria-labelledby="pause-title">
@@ -89,10 +93,11 @@
       <p class="best-line">Best <strong id="over-best">0</strong> · Finest <span id="over-finest">Kome</span></p>
       <div class="row">
         <button type="button" class="primary" id="retry-btn">One more try</button>
+        <button type="button" class="ghost" id="share-btn">Share</button>
       </div>
     </section>
   </div>
 
-  <script src="./script.js?v=5" defer></script>
+  <script src="./script.js?v=6" defer></script>
 </body>
 </html>
