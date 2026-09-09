@@ -1,4 +1,4 @@
-const CACHE = "mochi-drop-v6";
+const CACHE = "mochi-drop-v7";
 const ASSETS = [
   "./",
   "./index.html",
@@ -7,7 +7,8 @@ const ASSETS = [
   "./script.gz.b64.a",
   "./script.gz.b64.b",
   "./manifest.json",
-  "./icon.svg"
+  "./icon.svg",
+  "./audio/music-bed.mp3"
 ];
 
 self.addEventListener("install", (event) => {
