@@ -1,6 +1,6 @@
 (() => {
   const s = document.currentScript;
-  const v = (s && s.src && s.src.split("v=")[1]) || "7";
+  const v = (s && s.src && s.src.split("v=")[1]) || "8";
   Promise.all([
     fetch("script.gz.b64.a?v=" + v).then(r => { if (!r.ok) throw new Error(r.status); return r.text(); }),
     fetch("script.gz.b64.b?v=" + v).then(r => { if (!r.ok) throw new Error(r.status); return r.text(); }),
