@@ -1,0 +1,4 @@
+# .b is Brainfuck to Linguist. These are gzip+base64 payload shards, not source.
+script.gz.b64.a linguist-generated=true
+script.gz.b64.b linguist-generated=true
+*.b linguist-detectable=false
