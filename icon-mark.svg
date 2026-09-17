@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
-  <defs>
-    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFFBF5"/>
-      <stop offset="100%" stop-color="#F5F0E6"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="30%" r="46%">
-      <stop offset="0%" stop-color="#D4A574" stop-opacity="0.13"/>
-      <stop offset="100%" stop-color="#F5F0E6" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-  <rect width="1024" height="1024" fill="url(#paper)"/>
-  <ellipse cx="512" cy="300" rx="340" ry="260" fill="url(#glow)"/>
-  <g transform="translate(200,70) scale(1.35)">
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420">
+  <g transform="translate(50,40) scale(1.25)">
     
   <g id="flock-mark">
     <!-- support upper-left -->
@@ -225,17 +213,4 @@
   </g>
 
   </g>
-  <text x="512" y="690" text-anchor="middle"
-        font-family="Liberation Sans, DejaVu Sans, sans-serif"
-        font-size="62" font-weight="700" letter-spacing="5" fill="#1C1917">RAVEN FLOCK</text>
-  <text x="512" y="748" text-anchor="middle"
-        font-family="Liberation Serif, DejaVu Serif, serif"
-        font-size="27" font-style="italic" fill="#2A2622">Consider the ravens</text>
-  <g stroke="#C9A66B" stroke-width="1.2" opacity="0.55">
-    <line x1="330" y1="790" x2="430" y2="790"/>
-    <line x1="594" y1="790" x2="694" y2="790"/>
-  </g>
-  <text x="512" y="796" text-anchor="middle"
-        font-family="Liberation Serif, DejaVu Serif, serif"
-        font-size="15" letter-spacing="3" fill="#C9A66B" opacity="0.62">12 · 24</text>
 </svg>
