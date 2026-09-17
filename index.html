@@ -11,8 +11,10 @@
   <meta name="mobile-web-app-capable" content="yes" />
   <title>Mochi Drop</title>
   <link rel="manifest" href="./manifest.json" />
+  <link rel="icon" href="./favicon-32.png" type="image/png" sizes="32x32" />
   <link rel="icon" href="./icon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="./icon.svg" />
+  <link rel="icon" href="./icon-192.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" sizes="180x180" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -64,6 +66,7 @@
 
   <div id="overlay" class="overlay" data-screen="start">
     <section class="card" id="screen-start" aria-labelledby="start-title">
+      <img class="start-mark" src="./assets/brand/raven-flock-mark-only.svg" width="48" height="32" alt="" />
       <p class="card-kicker">A quiet stall, a warm bowl</p>
       <h2 id="start-title">Mochi Drop</h2>
       <p class="rules">Drop sticky rice. Match sizes. Make the giant daifuku — don’t overflow.</p>
@@ -75,6 +78,7 @@
         <button type="button" class="primary" id="play-btn">Classic</button>
         <button type="button" class="ghost" id="daily-btn">Daily Bowl</button>
       </div>
+      <p class="raven-foot">Raven Flock — you matter.</p>
     </section>
 
     <section class="card hidden" id="screen-pause" aria-labelledby="pause-title">
@@ -99,6 +103,6 @@
     </section>
   </div>
 
-  <script src="./script.js?v=11" defer></script>
+  <script src="./script.js?v=12" defer></script>
 </body>
 </html>

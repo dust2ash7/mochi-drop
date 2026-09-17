@@ -320,3 +320,21 @@ canvas {
 @media (min-width: 720px) {
   #app { padding-top: 18px; padding-bottom: 20px; }
 }
+
+
+/* Raven Flock v4 start mark — chrome ≤48px, never stretch */
+.start-mark {
+  display: block;
+  width: auto;
+  height: 40px;
+  max-height: 48px;
+  margin: 0 auto 0.65rem;
+  object-fit: contain;
+}
+.raven-foot {
+  margin: 1rem 0 0;
+  text-align: center;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: rgba(245, 240, 230, 0.55);
+}

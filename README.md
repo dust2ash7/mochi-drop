@@ -1,3 +1,11 @@
+<p align="center">
+  <img src="brand/logo-c.png" alt="Raven Flock" width="280" />
+</p>
+
+<p align="center"><strong>Raven Flock — Consider the ravens.</strong></p>
+
+---
+
 # Mochi Drop
 
 A premium, one-finger merge game in the spirit of Suika. Drop sticky mochi into a night-market bowl. Matching sizes become the next, until a giant daifuku crowns the pile — or the rim overflows.
