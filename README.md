@@ -10,7 +10,7 @@
 
 Drop sticky mochi into a bowl. Matching sizes merge. Stay under the rim.
 
-**Play:** [https://dust2ash7.github.io/mochi-drop/](https://dust2ash7.github.io/mochi-drop/)
+**Play:** [https://raven-flock.github.io/mochi-drop/](https://raven-flock.github.io/mochi-drop/)
 
 ## How to play
 
